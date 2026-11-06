@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uv-security"
+version = "1.0.0"
+description = "Fast, scan-friendly security scanner for uv projects with selective upgrades and HTML reports."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "uv-security" }]
+keywords = ["uv", "security", "audit", "vulnerability", "supply-chain"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Software Development :: Build Tools",
+]
+
+[project.scripts]
+uv-security = "uv_security.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["uv_security*"]

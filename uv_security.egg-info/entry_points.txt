@@ -1,0 +1,2 @@
+[console_scripts]
+uv-security = uv_security.cli:main
